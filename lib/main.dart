@@ -50,6 +50,7 @@ class MyApp extends StatelessWidget {
                 const SizedBox(
                   height: 50,
                 ),
+
                 //Image
                 Center(
                   child: Image.asset(
@@ -61,6 +62,7 @@ class MyApp extends StatelessWidget {
                 const SizedBox(
                   height: 50,
                 ),
+
                 //Text
                 const Text(
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -73,22 +75,76 @@ class MyApp extends StatelessWidget {
                 const SizedBox(
                   height: 30,
                 ),
-                Center(
-                  child: Container(
-                    padding: const EdgeInsets.all(15),
-                    width: 300,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(100),
-                      color: Colors.redAccent,
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "SPACE DETAILS",
-                        style: TextStyle(color: Colors.white),
+                GestureDetector(
+                  onTap: () {},
+                  child: Center(
+                    child: Container(
+                      padding: const EdgeInsets.all(15),
+                      width: 300,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        color: Colors.redAccent,
+                      ),
+                      child: const Center(
+                        child: Text(
+                          "SPACE DETAILS",
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ),
                   ),
-                )
+                ),
+
+                //Second Screen
+                Center(
+                  child: Image.asset(
+                    "assets/space2.png",
+                    height: 300,
+                    scale: 2,
+                  ),
+                ),
+                const Text(
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.w400),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(50.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                            color: Colors.orange,
+                            borderRadius: BorderRadius.circular(100)),
+                      ),
+                      Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                            color: Colors.pink,
+                            borderRadius: BorderRadius.circular(100)),
+                      ),
+                      Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                            color: Colors.purple,
+                            borderRadius: BorderRadius.circular(100)),
+                      ),
+                      Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.circular(100)),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
