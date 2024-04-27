@@ -14,14 +14,17 @@ class MyApp extends StatelessWidget {
       title: "Space App",
       home: Scaffold(
         backgroundColor: Colors.black,
+        //App Bar
         appBar: AppBar(
           backgroundColor: Colors.black,
           shadowColor: Colors.yellow,
+          //App bar Text
           title: const Text(
             "BLACK HOLE",
             style: TextStyle(
                 color: Colors.white, fontWeight: FontWeight.w900, fontSize: 30),
           ),
+          //App Bar Icon
           actions: [
             IconButton(
               onPressed: () {},
@@ -30,18 +33,64 @@ class MyApp extends StatelessWidget {
             )
           ],
         ),
-        body: const Padding(
-          padding: EdgeInsets.all(16.0),
-          child: Column(
-            children: [
-              Text(
-                " SPACE DETAILS",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500),
-              )
-            ],
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                //Heading
+                const Text(
+                  " SPACE DETAILS",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500),
+                ),
+                const SizedBox(
+                  height: 50,
+                ),
+                //Image
+                Center(
+                  child: Image.asset(
+                    "assets/space1.png",
+                    height: 300,
+                    scale: 2,
+                  ),
+                ),
+                const SizedBox(
+                  height: 50,
+                ),
+                //Text
+                const Text(
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.w400),
+                ),
+
+                //button
+                const SizedBox(
+                  height: 30,
+                ),
+                Center(
+                  child: Container(
+                    padding: const EdgeInsets.all(15),
+                    width: 300,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
+                      color: Colors.redAccent,
+                    ),
+                    child: const Center(
+                      child: Text(
+                        "SPACE DETAILS",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
